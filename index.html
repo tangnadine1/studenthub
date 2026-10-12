@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grade 6 Math Tutor</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: green highway-sign header over a list of destination cards, one per tutor page, each with a mono route tag. */
+:root{
+  --bg:#eef2ee; --surface:#fbfcfb; --ink:#14231b; --muted:#55645b; --line:#cdd8cf;
+  --sign:#0e6b3f; --sign-ink:#ffffff; --accent:#f2b705; --accent-ink:#1a1500;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Barlow",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --mono:"DM Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1a14; --surface:#17251d; --ink:#e8f0ea; --muted:#9db0a3; --line:#2b3d32; --sign:#14803f; color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1a14; --surface:#17251d; --ink:#e8f0ea; --muted:#9db0a3; --line:#2b3d32; --sign:#14803f; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.45;padding-inline:16px;padding-block:0 56px}
+.wrap{max-width:760px;margin-inline:auto;display:flex;flex-direction:column;gap:20px}
+.sign{background:var(--sign);color:var(--sign-ink);border-radius:0 0 14px 14px;padding:20px 18px 16px;margin-inline:-16px;border-bottom:4px solid var(--accent);display:flex;flex-direction:column;gap:10px}
+@media (min-width:792px){.sign{margin-inline:0}}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(2.2rem,8vw,3.4rem);line-height:.95;margin:0;text-transform:uppercase;letter-spacing:.01em}
+.sub{font-family:var(--mono);font-size:.8rem;letter-spacing:.04em}
+.lang{display:flex;gap:6px}
+.lang button{background:transparent;border:2px solid color-mix(in srgb,var(--sign-ink) 55%,transparent);color:var(--sign-ink);border-radius:8px;padding:6px 14px;font:inherit;font-weight:600;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--sign-ink);color:var(--sign);border-color:var(--sign-ink)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.intro{max-width:60ch;color:var(--muted)}
+.list{display:flex;flex-direction:column;gap:14px;padding:0;margin:0;list-style:none}
+.card{display:grid;grid-template-columns:1fr auto;gap:8px 18px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;color:inherit;text-decoration:none;min-width:0}
+.card:hover{border-color:var(--sign)}
+.tag{grid-column:1/-1;font-family:var(--mono);font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.card h2{font-family:var(--display);font-size:1.9rem;line-height:1.05;margin:0;text-transform:uppercase;letter-spacing:.01em}
+.card p{margin:0;grid-column:1;max-width:56ch}
+.facts{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 0;padding:0;list-style:none}
+.facts li{font-family:var(--mono);font-size:.78rem;border:1px solid var(--line);border-radius:6px;padding:2px 8px}
+.go{grid-row:2;grid-column:2;justify-self:end;background:var(--sign);color:var(--sign-ink);border-radius:10px;padding:10px 18px;font-family:var(--display);font-size:1.3rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+@media (max-width:520px){.card{grid-template-columns:1fr}.go{grid-row:auto;grid-column:1;justify-self:start}}
+.soon{border:2px dashed var(--line);border-radius:12px;padding:16px 20px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+
+
+<div class="wrap">
+  <header class="sign">
+    <div class="top">
+      <h1 id="h1">Grade 6 Math Tutor</h1>
+      <div class="lang" role="group" aria-label="Language / Idioma">
+        <button type="button" id="en" aria-pressed="true">English</button>
+        <button type="button" id="es" aria-pressed="false">Español</button>
+      </div>
+    </div>
+    <div class="sub" id="sub">MODULE 1 · RATIOS AND UNIT RATES</div>
+  </header>
+
+  <p class="intro" id="intro">Pick a page to practice with. Each one can be read aloud, and each one is available in English and Spanish.</p>
+
+  <ul class="list">
+    <li>
+      <a class="card" href="https://claude.ai/artifact/79qn8gUHiSc6P3qCbbfeeu" target="_blank" rel="noopener">
+        <span class="tag" id="t1">Practice · Mid-Module 1</span>
+        <h2>Ratio Coach</h2>
+        <p id="d1">Ten practice questions for the Module 1 mid-module assessment, with hints on demand, worked solutions, and a similar problem to try after each one.</p>
+        <ul class="facts"><li id="f1a">10 questions</li><li id="f1b">Hints</li><li id="f1c">Worked solutions</li></ul>
+        <span class="go" id="g1">Open</span>
+      </a>
+    </li>
+    <li>
+      <a class="card" href="https://claude.ai/artifact/Hn4m9ApZ6X2zmWxmWVVGrP" target="_blank" rel="noopener">
+        <span class="tag" id="t0">Game · Lesson 16</span>
+        <h2>Rate Finder</h2>
+        <p id="d0">A quiz game on turning ratios into rates. Students name the rate, the unit rate, and the rate unit, then type their own unit rates. Results go to the teacher dashboard.</p>
+        <ul class="facts"><li id="f0a">16 questions</li><li id="f0b">4 levels</li><li id="f0c">Teacher results</li></ul>
+        <span class="go" id="g0">Play</span>
+      </a>
+    </li>
+    <li>
+      <a class="card" href="https://claude.ai/artifact/7mAfqAxJkY3BP7366uAwZz" target="_blank" rel="noopener">
+        <span class="tag" id="t2">Game · Lesson 17</span>
+        <h2>Rate Rescue</h2>
+        <p id="d2">A quiz game on turning rates into ratios. Students work through four levels and type their own whole-number ratios. Results go to the teacher dashboard.</p>
+        <ul class="facts"><li id="f2a">16 questions</li><li id="f2b">4 levels</li><li id="f2c">Teacher results</li></ul>
+        <span class="go" id="g2">Play</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="soon" id="soon">More Grade 6 tutor pages will be added here.</div>
+</div>
+
+<script>
+var T={
+ en:{h1:"Grade 6 Math Tutor",sub:"MODULE 1 · RATIOS AND UNIT RATES",intro:"Pick a page to practice with. Each one can be read aloud, and each one is available in English and Spanish.",
+  t1:"Practice · Mid-Module 1",d1:"Ten practice questions for the Module 1 mid-module assessment, with hints on demand, worked solutions, and a similar problem to try after each one.",f1a:"10 questions",f1b:"Hints",f1c:"Worked solutions",g1:"Open",
+  t0:"Game · Lesson 16",d0:"A quiz game on turning ratios into rates. Students name the rate, the unit rate, and the rate unit, then type their own unit rates. Results go to the teacher dashboard.",f0a:"16 questions",f0b:"4 levels",f0c:"Teacher results",g0:"Play",t2:"Game · Lesson 17",d2:"A quiz game on turning rates into ratios. Students work through four levels and type their own whole-number ratios. Results go to the teacher dashboard.",f2a:"16 questions",f2b:"4 levels",f2c:"Teacher results",g2:"Play",soon:"More Grade 6 tutor pages will be added here."},
+ es:{h1:"Tutor de matemáticas 6.º",sub:"MÓDULO 1 · RAZONES Y TASAS UNITARIAS",intro:"Elige una página para practicar. Todas se pueden escuchar en voz alta y están disponibles en inglés y en español.",
+  t1:"Práctica · Mitad del Módulo 1",d1:"Diez preguntas de práctica para la evaluación de mitad del Módulo 1, con pistas cuando las necesites, soluciones paso a paso y un problema parecido después de cada una.",f1a:"10 preguntas",f1b:"Pistas",f1c:"Soluciones paso a paso",g1:"Abrir",
+  t0:"Juego · Lección 16",d0:"Un juego de preguntas sobre cómo convertir razones en tasas. Los estudiantes nombran la tasa, la tasa unitaria y la unidad de tasa, y luego escriben sus propias tasas unitarias. Los resultados llegan al panel del maestro.",f0a:"16 preguntas",f0b:"4 niveles",f0c:"Resultados para el maestro",g0:"Jugar",t2:"Juego · Lección 17",d2:"Un juego de preguntas sobre cómo convertir tasas en razones. Los estudiantes pasan por cuatro niveles y escriben sus propias razones de números enteros. Los resultados llegan al panel del maestro.",f2a:"16 preguntas",f2b:"4 niveles",f2c:"Resultados para el maestro",g2:"Jugar",soon:"Aquí se agregarán más páginas de tutor de 6.º grado."}
+};
+function setLang(l){
+  var d=T[l];
+  Object.keys(d).forEach(function(k){var el=document.getElementById(k);if(el)el.textContent=d[k]});
+  document.getElementById("en").setAttribute("aria-pressed",l==="en");
+  document.getElementById("es").setAttribute("aria-pressed",l==="es");
+  document.documentElement.lang=l;
+  try{localStorage.setItem("g6-lang",l)}catch(e){}
+}
+document.getElementById("en").addEventListener("click",function(){setLang("en")});
+document.getElementById("es").addEventListener("click",function(){setLang("es")});
+var saved="en";try{saved=localStorage.getItem("g6-lang")==="es"?"es":"en"}catch(e){}
+if(saved==="es")setLang("es");
+</script>
+
+</body>
+</html>
